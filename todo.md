@@ -1,0 +1,1 @@
+- change logo to English
