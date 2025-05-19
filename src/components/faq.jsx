@@ -16,8 +16,7 @@ export default function Faq() {
             answer: `Homeopathy is generally considered very safe. The remedies are prepared at such high
                                 dilutions that they contain minimal to no molecules of the original substance, making them
                                 non-toxic and suitable for people of all ages, including infants, pregnant women, and
-                                elderly individuals. Homeopathic remedies also don't interact with conventional medications,
-                                making them a good complementary option for those on multiple prescriptions.` },
+                                elderly individuals.` },
         {
             question: "How long does homeopathic treatment take to work? ",
             answer: `The timeline for improvement varies based on the condition being treated, its severity, and
@@ -26,13 +25,6 @@ export default function Faq() {
                                 and may require several months of treatment. However, many patients report feeling some
                                 improvement in their overall wellbeing soon after starting treatment, even if the specific
                                 condition takes longer to resolve completely.` },
-        {
-            question: "Can homeopathy be used alongside conventional medicine? ",
-            answer: `Yes, homeopathy can work well as a complementary approach alongside conventional medical
-                                treatments. Homeopathic remedies don't interfere with medications, making them safe to use
-                                concurrently. Many of our patients use homeopathy alongside conventional treatments,
-                                especially for chronic conditions. We always recommend that you inform all your healthcare
-                                providers about any treatments you're receiving to ensure coordinated care.` },
         {
             question: "What conditions can homeopathy treat? ",
             answer: `Homeopathy can address a wide range of acute and chronic conditions. It's particularly
@@ -66,7 +58,7 @@ export default function Faq() {
                 </div>
 
                 <div class="mt-10 text-center">
-                    <a href="#contact"
+                    <a href="https://wa.me/+918075899030"
                         class="inline-block bg-white border border-primary text-primary hover:bg-primary hover:text-white font-medium py-3 px-8 rounded-full transition-colors">
                         Have More Questions? Contact Us
                     </a>

@@ -1,6 +1,10 @@
+import location from "../assets/location.svg"
+import phone from "../assets/phone.svg"
+import hours from "../assets/hours.svg"
+
 export default function Contact() {
     return (
-        <section id="contact" class="py-16 bg-gray-50">
+        <section id="contact" class="py-16 bg-gray-50 scroll-mt-20">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row">
                     <div class="md:w-1/2 mb-10 md:mb-0">
@@ -9,46 +13,60 @@ export default function Contact() {
                             schedule a consultation or learn more about our services.</p>
 
                         <div class="mb-6 flex items-start">
-                            <div class="bg-green-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-map-marker-alt text-green-600"></i>
+                            <div class="bg-green-200 p-1 rounded-full mr-4">
+                                <img src={location} alt="" className="h-6" />
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1">Location</h4>
-                                <p class="text-gray-600">123 Healing Way, Wellness District<br />Greenville, CA 90210</p>
+                                <h4 class="font-bold mb-1">Location</h4> <br />
+                                <p class="text-gray-600">Verumpulakkal: <a
+                                    href="https://maps.app.goo.gl/WCwCYECn2Q3KfMs36"
+                                    className="underline"
+                                >
+                                    Click to open in Google Maps
+                                </a></p> <br />
+                                <p class="text-gray-600">Kadannamanna: <a
+                                    href="https://maps.app.goo.gl/YNt5jZjoPE4qP6DM9"
+                                    className="underline"
+                                >
+                                    Click to open in Google Maps
+                                </a></p>
                             </div>
                         </div>
 
                         <div class="mb-6 flex items-start">
-                            <div class="bg-green-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-phone-alt text-green-600"></i>
+                            <div class="bg-green-200 p-1 rounded-full mr-4">
+                                <img src={phone} alt="" className="h-6" />
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1">Phone</h4>
-                                <p class="text-gray-600">(555) 123-4567</p>
+                                <h4 class="font-bold mb-1">Phone and WhatsApp</h4>
+                                <p class="text-gray-600">(+91) 8075-899-030</p>
                             </div>
                         </div>
 
                         <div class="mb-6 flex items-start">
-                            <div class="bg-green-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-envelope text-green-600"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold mb-1">Email</h4>
-                                <p class="text-gray-600">info@harmonyhomeopathic.com</p>
-                            </div>
-                        </div>
-
-                        <div class="mb-6 flex items-start">
-                            <div class="bg-green-100 p-3 rounded-full mr-4">
-                                <i class="fas fa-clock text-green-600"></i>
+                            <div class="bg-green-200 p-1 rounded-full mr-4">
+                                <img src={hours} alt="" className="h-6" />
                             </div>
                             <div>
                                 <h4 class="font-bold mb-1">Hours</h4>
-                                <p class="text-gray-600">
-                                    Monday - Friday: 9am - 6pm<br />
-                                    Saturday: 10am - 2pm<br />
-                                    Sunday: Closed
-                                </p>
+                                <table className="text-gray-600">
+                                    <tr>
+                                        <td className="pr-4">Monday - Thursday:</td>
+                                        <td>10AM - 1PM(Kadannamanna) </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>4:30PM - 6:30PM(Verumpulakkal)</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="text-right pr-4">Friday: </td>
+                                        <td>4:30PM - 6:30PM(Verumpulakkal)</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="text-right pr-4">Sunday:</td>
+                                        <td>Holiday</td>
+                                    </tr>
+                                </table>
                             </div>
                         </div>
                     </div>

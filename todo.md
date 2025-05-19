@@ -1,1 +1,2 @@
 - change logo to English
+- convert emojis into vectors
