@@ -11,7 +11,7 @@ export default function About() {
                     <div class="md:w-1/2 md:pl-12 flex flex-col justify-center">
                         <h2 class="text-3xl font-bold mb-6 text-gray-800">About Shifa Homeopathic Speciality Clinic</h2>
                         <p class="text-gray-600 mb-6 leading-relaxed">
-                            Founded in 2020, Harmony Homeopathic Clinic has been at the forefront of providing gentle,
+                            Founded in 2020, Shifa Homeopathic Speciality Clinic has been at the forefront of providing gentle,
                             effective homeopathic care. Our mission is to help patients achieve optimal health through
                             individualized homeopathic treatments that address the root cause of illness.
                         </p>

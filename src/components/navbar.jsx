@@ -21,11 +21,11 @@ export default function Navbar() {
         <nav class="bg-white py-4 shadow-md fixed top-0 w-full z-50 h-24">
             <div class="flex flex-row lg:flex-row items-center h-full w-full justify-around">
                 <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden absolute top-8 left-5">
-                    <img src={hamburger} alt="" className="h-8" />
+                    <img src={hamburger} alt="" className="h-8 md:h-8" />
                 </button>
                 <div class="flex items-center">
-                    <img src={logo} alt="Logo" className="h-12 pr-5" />
-                    <img src={logoText} alt="Logo" className="h-10" />
+                    <img src={logo} alt="Logo" className="h-10 md:h-12 pr-5" />
+                    <img src={logoText} alt="Logo" className="h-8 md:h-10" />
                 </div>
                 <div class="hidden lg:flex space-x-8">
                     <a href="#home" class="text-green-600 hover:text-green-800 font-medium">Home</a>
