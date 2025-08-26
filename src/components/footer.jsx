@@ -8,9 +8,9 @@ export default function Footer() {
             <div class="container mx-auto px-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-20 mb-12">
                     <div>
-                        <a href="#" class="text-2xl font-bold text-white flex items-center mb-6">
-                            <img src={logo} alt="." className="h-12 pr-4" />
-                            <img src={logoText} alt="" className="h-10" />
+                        <a href="#" class="text-2xl font-bold text-white flex items-center mb-6 flex max-w-[100vw] gap-[4%]">
+                            <img src={logo} alt="." className="w-[12%]" />
+                            <img src={logoText} alt="" className="w-[80%]" />
                         </a>
                         <p class="text-gray-400 mb-6">
                             Providing gentle, effective natural healing through classical homeopathy since 2020.

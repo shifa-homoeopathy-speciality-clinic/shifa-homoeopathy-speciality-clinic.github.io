@@ -20,12 +20,14 @@ export default function Navbar() {
     return (
         <nav class="bg-white py-4 shadow-md fixed top-0 w-full z-50 h-24">
             <div class="flex flex-row lg:flex-row items-center h-full w-full justify-around">
-                <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden absolute top-8 left-5">
+                <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden top-8 left-5">
                     <img src={hamburger} alt="" className="h-8 md:h-8" />
                 </button>
-                <div class="flex items-center">
-                    <img src={logo} alt="Logo" className="h-10 md:h-12 pr-5" />
-                    <img src={logoText} alt="Logo" className="h-8 md:h-10" />
+                <div class="flex items-center gap-[5%] justify-items-end w-full lg:w-auto place-content-end pr-[5vw] max-w-[80vw] lg:pr-0 md:place-content-center">
+                    {/* <img src={logo} alt="Logo" className="h-10 md:h-12 pr-5" />
+                    <img src={logoText} alt="Logo" className="h-8 md:h-10" /> */}
+                    <img src={logo} alt="Logo" className="w-[4vh] md:h-12 md:w-auto" />
+                    <img src={logoText} alt="Logo" className="w-[60vw] md:h-10 md:w-auto" />
                 </div>
                 <div class="hidden lg:flex space-x-8">
                     <a href="#home" class="text-green-600 hover:text-green-800 font-medium">Home</a>
@@ -43,31 +45,43 @@ export default function Navbar() {
                 </div>
             </div>
 
-            <div className={`${menuOpen ? "h-70" : "h-0 !p-0"} overflow-hidden bg-green-100 flex flex-col justify-around mt-3 transition-[height] duration-500`}>
-                <div className="p-2 pl-4 flex items-center gap-4">
-                    <img src={home} alt="" className="h-4" />
-                    <a onClick={closeMenu} href="#home" class="">Home</a>
-                </div>
-                <div className="p-2 pl-4 border-t-2 border-green-300 flex items-center gap-4">
-                    <img src={diseases} alt="" className="h-4" />
-                    <a onClick={closeMenu} href="#diseases" class="">Diseases</a>
-                </div>
-                <div className="p-2 pl-4 border-t-2 border-green-300 flex items-center gap-4">
-                    <img src={about} alt="" className="h-4" />
-                    <a onClick={closeMenu} href="#about" class="">About</a>
-                </div>
-                <div className="p-2 pl-4 border-t-2 border-green-300 flex items-center gap-4">
-                    <img src={features} alt="" className="h-4" />
-                    <a onClick={closeMenu} href="#features" class="">Features</a>
-                </div>
-                <div className="p-2 pl-4 border-t-2 border-green-300 flex items-center gap-4">
-                    <img src={contact} alt="" className="h-4" />
-                    <a onClick={closeMenu} href="#contact" class="">Contact</a>
-                </div>
-                <div className="p-2 pl-4 border-t-2 border-green-300 flex items-center gap-4">
-                    <img src={whatsapp} alt="" className="h-4" />
-                    <a onClick={closeMenu} href="https://chat.whatsapp.com/IHEK5AOaBUUCku4MOJxUSu" class="">Join our WhatsApp group</a>
-                </div>
+            <div className={`${menuOpen ? "h-[255px]" : "h-0 !p-0"} overflow-hidden bg-green-50 flex flex-col justify-around mt-3 transition-[height] duration-500`}>
+                <a onClick={closeMenu} href="#home" class="">
+                    <div className="p-2 pl-5 border-t-2 border-green-500 bg-linear-to-br from-green-100 via-green-100 to-green-300 rounded-xl flex flex items-center gap-4">
+                        <img src={home} alt="" className="h-4" />
+                        Home
+                    </div>
+                </a>
+                <a onClick={closeMenu} href="#diseases" class="">
+                    <div className="p-2 pl-5 border-t-2 border-green-500 bg-linear-to-br from-green-100 via-green-100 to-green-300 rounded-xl flex items-center gap-4">
+                        <img src={diseases} alt="" className="h-4" />
+                        Diseases
+                    </div>
+                </a>
+                <a onClick={closeMenu} href="#about" class="">
+                    <div className="p-2 pl-5 border-t-2 border-green-500 bg-linear-to-br from-green-100 via-green-100 to-green-300 rounded-xl flex items-center gap-4">
+                        <img src={about} alt="" className="h-4" />
+                        About
+                    </div>
+                </a>
+                <a onClick={closeMenu} href="#features" class="">
+                    <div className="p-2 pl-5 border-t-2 border-green-500 bg-linear-to-br from-green-100 via-green-100 to-green-300 rounded-xl flex items-center gap-4">
+                        <img src={features} alt="" className="h-4" />
+                        Features
+                    </div>
+                </a>
+                <a onClick={closeMenu} href="#contact" class="">
+                    <div className="p-2 pl-5 border-t-2 border-green-500 bg-linear-to-br from-green-100 via-green-100 to-green-300 rounded-xl flex items-center gap-4">
+                        <img src={contact} alt="" className="h-4" />
+                        Contact
+                    </div>
+                </a>
+                <a onClick={closeMenu} href="https://chat.whatsapp.com/IHEK5AOaBUUCku4MOJxUSu" class="">
+                    <div className="p-2 pl-5 border-y-2 border-green-500 bg-linear-to-br from-green-100 via-green-100 to-green-300 rounded-xl flex items-center gap-4">
+                        <img src={whatsapp} alt="" className="h-4" />
+                        Join our WhatsApp group
+                    </div>
+                </a>
             </div>
         </nav>
     )

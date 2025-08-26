@@ -38,7 +38,7 @@ export default function Faq() {
         <section id="faq" class="py-20">
             <div class="container mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto mb-16">
-                    <span class="text-primary font-semibold mb-4 block uppercase tracking-wider">Common Questions</span>
+                    <span class="text-primary font-semibold mb-4 block uppercase tracking-wider">Have Doubts?</span>
                     <h2 class="text-3xl md:text-4xl font-bold mb-6">Frequently Asked Questions</h2>
                     <p class="text-gray-600">
                         Find answers to common questions about homeopathy and our approach to treatment.
@@ -59,7 +59,7 @@ export default function Faq() {
 
                 <div class="mt-10 text-center">
                     <a href="https://wa.me/+918075899030"
-                        class="inline-block bg-white border border-primary text-primary hover:bg-primary hover:text-white font-medium py-3 px-8 rounded-full transition-colors">
+                        class="inline-block bg-white border border-primary text-primary hover:bg-green-100 hover:text-green-900 font-medium py-3 px-8 rounded-full transition-colors">
                         Have More Questions? Contact Us
                     </a>
                 </div>

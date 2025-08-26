@@ -6,11 +6,20 @@ const DiseaseModal = ({ isOpen, onClose, children }) => {
         const handleKeyDown = (e) => {
             if (e.key === "Escape") onClose();
         };
+        
+        const handlePopState = () => {
+            onClose();
+        }
+
         if (isOpen) {
             document.addEventListener("keydown", handleKeyDown);
+            window.addEventListener("popstate", handlePopState);
+            history.pushState(null, document.title, location.href);
         }
+
         return () => {
             document.removeEventListener("keydown", handleKeyDown);
+            window.removeEventListener("popstate", handlePopState);
         };
     }, [isOpen, onClose]);
 

@@ -17,19 +17,21 @@ export default function Contact() {
                                 <img src={location} alt="" className="h-6" />
                             </div>
                             <div>
-                                <h4 class="font-bold mb-1">Location</h4> <br />
+                                <h4 class="font-bold mb-1">Location</h4>
                                 <p class="text-gray-600">Verumpulakkal: <a
                                     href="https://maps.app.goo.gl/WCwCYECn2Q3KfMs36"
                                     className="underline"
                                 >
                                     Click to open in Google Maps
-                                </a></p> <br />
+                                </a></p> 
+                                {/* <br />
                                 <p class="text-gray-600">Kadannamanna: <a
                                     href="https://maps.app.goo.gl/YNt5jZjoPE4qP6DM9"
                                     className="underline"
                                 >
                                     Click to open in Google Maps
-                                </a></p>
+                                </a>
+                                </p> */}
                             </div>
                         </div>
 
@@ -51,16 +53,12 @@ export default function Contact() {
                                 <h4 class="font-bold mb-1">Hours</h4>
                                 <table className="text-gray-600">
                                     <tr>
-                                        <td className="pr-4">Monday - Thursday:</td>
-                                        <td>10AM - 1PM(Kadannamanna) </td>
+                                        <td className="pr-4">Monday - Saturday:</td>
+                                        <td>10:00 AM - 1:00 PM </td>
                                     </tr>
                                     <tr>
                                         <td></td>
-                                        <td>4:30PM - 6:30PM(Verumpulakkal)</td>
-                                    </tr>
-                                    <tr>
-                                        <td className="text-right pr-4">Friday: </td>
-                                        <td>4:30PM - 6:30PM(Verumpulakkal)</td>
+                                        <td>4:30 PM - 6:30 PM</td>
                                     </tr>
                                     <tr>
                                         <td className="text-right pr-4">Sunday:</td>
