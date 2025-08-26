@@ -2,7 +2,7 @@
   "name": "shifa-clinic",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://hisham-alangadan.github.io/shifa-homoeopathy-speciality-clinic",
+  "homepage": "https://shifa-homoeopathy-speciality-clinic.github.io/",
   "type": "module",
   "scripts": {
     "dev": "vite",
