@@ -4,6 +4,25 @@ export default function Hero() {
             <div class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-center">
                 <div class="md:w-1/2 flex flex-col items-start">
                     <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6 text-center">A Complete Solution for your Health Problems</h1>
+                    <div className="bg-green-100 py-6 border border-red-700">
+                        <ul class="ml-10">
+                            <li className="class-2xl md:text-4xl font-bold w-full list-disc">
+                                Homoeopathic Physician
+                            </li>
+                            <li className="class-2xl md:text-4xl font-bold w-full list-disc">
+                                Certified ACCESS BAR practitioner
+                                <a class="text-sm italic font-normal">(Read More)</a>
+                            </li>
+                            <li className="class-2xl md:text-4xl font-bold w-full list-disc">
+                                Certified ACCESS FACELIFT practitioner
+                                <a class="text-sm italic font-normal">(Read More)</a>
+                            </li>
+                            <li className="class-2xl md:text-4xl font-bold w-full list-disc">
+                                EFT practitioner
+                                <a class="text-sm italic font-normal">(Read More)</a>
+                            </li>
+                        </ul>
+                    </div>
                     <p class="text-xl mb-8 text-gray-600 text-center">Discover the gentle, effective, complete approach to wellness with our
                         personalized homeopathic treatments.</p>
                     <div class="flex flex-col sm:flex-row w-full justify-around">
