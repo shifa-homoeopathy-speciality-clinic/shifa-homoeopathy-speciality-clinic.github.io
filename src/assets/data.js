@@ -1,3 +1,60 @@
+import { Heart, Leaf, Users } from "lucide-react";
+
+export const accessFeatures = [
+    {
+      icon: Leaf,
+      title: 'Access Bar',
+      description:
+        'The doctor is a certified Access Bar practitioner.',
+      color: '#4a6741',
+      delay: 0.1,
+    },
+    {
+      icon: Users,
+      title: 'Access Facelift',
+      description:
+        'The doctor is also a certified Access Facelift practitioner.',
+      color: '#6b8e23',
+      delay: 0.3,
+    },
+    // {
+    //   icon: Users,
+    //   title: 'EFT Practitioner',
+    //   description:
+    //     'Lorem Ipsum?',
+    //   color: '#556b2f',
+    //   delay: 0.5,
+    // },
+  ];
+
+export const features1 = [
+    {
+      icon: Leaf,
+      title: 'Access Bar',
+      description:
+        'The doctor is a certified Access Bar practitioner.',
+      gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      delay: 0.2,
+    },
+    {
+      icon: Users,
+      title: 'Access Facelift',
+      description:
+        'The doctor is also a certified Access Facelift practitioner.',
+      gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+      delay: 0.4,
+    },
+    // {
+    //   icon: Users,
+    //   title: '5000+ Happy Patients',
+    //   description:
+    //     'Join thousands of satisfied patients who have experienced the transformative power of holistic homeopathic care.',
+    //   gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+    //   delay: 0.6,
+    // },
+  ];
+
+
 export const diseasesData = [
     {
         disease: "Post-Traumatic Ailments",
