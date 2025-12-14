@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Heart, Leaf, Users, Sparkles, Zap, Star } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Sparkles, Zap, Star } from 'lucide-react';
 import { features1 } from '../assets/data';
+import DiseaseModal from './diseaseModal';
 
-const FeatureCard = ({ icon: Icon, title, description, gradient, delay, index }) => {
+const FeatureCard = ({ icon: Icon, title, description, gradient, delay, index, setValue }) => {
   const [isHovered, setIsHovered] = useState(false);
   // const [particles, setParticles] = useState([]);
 
@@ -120,17 +121,17 @@ const FeatureCard = ({ icon: Icon, title, description, gradient, delay, index })
           </div>
 
           {/* Lightning bolt effect */}
-          {isHovered && (
+          {/* {isHovered && (
             <Zap
               className="absolute text-yellow-400"
               size={24}
               style={{
-                top: '-10px',
-                right: '-10px',
+                bottom: '-10px',
+                left: '-10px',
                 animation: 'zap 0.6s ease-out',
               }}
             />
-          )}
+          )} */}
         </div>
 
         {/* Number badge with animation */}
@@ -165,6 +166,7 @@ const FeatureCard = ({ icon: Icon, title, description, gradient, delay, index })
             style={{
               background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
             }}
+            onClick={() => setValue(index)}
           >
             <span className="relative z-10 flex items-center">
               Know More
@@ -209,12 +211,23 @@ const FeatureCard = ({ icon: Icon, title, description, gradient, delay, index })
 
 const HeroFeatureCardsSparkles = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [heading, setHeading] = useState("");
+  const [description, setDescription] = useState("");
+  const [val, setVal] = useState(-1);
+
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-
+  useEffect(() => {
+    if (val != -1) { // closing the popup
+      setHeading(features1[val].heading);
+      // setDescription(features1[val].detailedDescription);
+      const targetDescriptionElement = document.getElementById('description');
+      targetDescriptionElement.innerHTML = (features1[val].detailedDescription)
+    }
+  }, [val]);
 
   return (
     <div className="relative bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 py-20 px-4 overflow-hidden">
@@ -330,20 +343,20 @@ const HeroFeatureCardsSparkles = () => {
             We Also Specialize In...
           </h2>
 
-          <p
+          {/* <p
             className="text-gray-700 text-lg max-w-2xl mx-auto"
             style={{
               animation: isVisible ? 'floatIn 1s ease-out 0.4s both' : 'none',
             }}
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, doloribus?
-          </p>
+          </p> */}
         </div>
 
         {/* Feature cards grid */}
         <div className="grid grid-cols-1 gap-8 md:flex md:justify-around">
           {features1.map((feature, index) => (
-            <FeatureCard key={index} {...feature} index={index} />
+            <FeatureCard key={index} {...feature} index={index} setValue={setVal} />
           ))}
         </div>
 
@@ -354,8 +367,19 @@ const HeroFeatureCardsSparkles = () => {
             animation: isVisible ? 'floatIn 1s ease-out 1s both' : 'none',
           }}
         >
-
         </div>
+        <DiseaseModal isOpen={val != -1} onClose={() => setVal(-1)}>
+          <h2 className="text-3xl font-bold mb-4">{heading}</h2>
+          <p id='description' className="text-lg text-gray-700 mb-6">
+            {description}
+          </p>
+          <button
+            onClick={() => setVal(-1)}
+            className="mt-4 px-6 py-2 bg-red-500 text-white rounded-2xl hover:bg-red-600"
+          >
+            Close
+          </button>
+        </DiseaseModal>
       </div>
     </div>
   );

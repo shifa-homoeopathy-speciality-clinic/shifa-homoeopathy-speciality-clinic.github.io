@@ -15,7 +15,7 @@ function App() {
     <>
       <Navbar></Navbar>
       <Hero></Hero>
-      <HeroFeatureCards></HeroFeatureCards>
+      {/* <HeroFeatureCards></HeroFeatureCards> */}
       <HeroFeatureCardsSparkles></HeroFeatureCardsSparkles>
       <Features></Features>
       <About></About>

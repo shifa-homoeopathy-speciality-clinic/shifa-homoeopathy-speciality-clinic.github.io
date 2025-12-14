@@ -20,17 +20,19 @@ export default function DiseaseComponent({ disease, smallDescription, largeDescr
                 </button>
 
                 <DiseaseModal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-                    <div className="">
-                        <h2 className="text-3xl font-bold mb-4">{disease}</h2>
-                        <p className="text-lg text-gray-700 mb-6">
-                            {largeDescription}
-                        </p>
-                        <button
-                            onClick={() => setModalOpen(false)}
-                            className="mt-4 px-6 py-2 bg-red-500 text-white rounded-2xl hover:bg-red-600"
-                        >
-                            Close
-                        </button>
+                    <div className="flex justify-center">
+                        <div className="md:w-1/2">
+                            <h2 className="text-3xl font-bold mb-4">{disease}</h2>
+                            <p className="text-lg text-gray-700 mb-6">
+                                {largeDescription}
+                            </p>
+                            <button
+                                onClick={() => setModalOpen(false)}
+                                className="mt-4 px-6 py-2 bg-red-500 text-white rounded-2xl hover:bg-red-600"
+                            >
+                                Close
+                            </button>
+                        </div>
                     </div>
                 </DiseaseModal>
             </div>

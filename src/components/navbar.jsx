@@ -1,4 +1,3 @@
-// import navlogo from "../assets/navlogo.png"
 import logo from "../assets/logo.svg"
 import logoText from "../assets/Logo Text.svg"
 import hamburger from "../assets/hamburger.svg"
@@ -8,19 +7,52 @@ import diseases from "../assets/nav_3diseases.svg"
 import features from "../assets/nav_4features.svg"
 import contact from "../assets/nav_5contact.svg"
 import whatsapp from "../assets/nav_6whatsapp.svg"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false)
+    const [menuIsClosing, setMenuIsClosing] = useState(false)
+    const menuRef = useRef(null)
 
     function closeMenu() {
         setMenuOpen(false)
     }
 
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (!menuIsClosing) {
+                setMenuOpen(false)
+            }
+            setMenuIsClosing(true)
+            setTimeout(() => {
+                setMenuIsClosing(false)
+            }, 700);
+        }
+
+        document.addEventListener('mousedown', handleClickOutside)
+        document.addEventListener('touchstart', handleClickOutside)
+
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside)
+            document.removeEventListener('touchstart', handleClickOutside)
+        }
+    })
+
+    function menuClick() {
+        // if (menuOpen) {
+        //     setMenuOpen(false)
+        // } else {
+        //     if (!menuIsClosing) {
+        //         setMenuOpen(true)
+        //     }
+        // }
+        setMenuOpen(!menuOpen)
+    }
+
     return (
-        <nav class="bg-white py-4 shadow-md fixed top-0 w-full z-50 h-24">
+        <nav class="bg-white py-4 shadow-md fixed top-0 w-full z-50 h-16 md:h-24">
             <div class="flex flex-row lg:flex-row items-center h-full w-full justify-around">
-                <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden top-8 left-5">
+                <button onClick={() => menuClick()} className="lg:hidden top-8 left-5">
                     <img src={hamburger} alt="" className="h-8 md:h-8" />
                 </button>
                 <div class="flex items-center gap-[5%] justify-items-end w-full lg:w-auto place-content-end pr-[5vw] max-w-[80vw] lg:pr-0 md:place-content-center">
@@ -47,7 +79,7 @@ export default function Navbar() {
 
             <div className={`${menuOpen ? "h-[255px]" : "h-0 !p-0"} overflow-hidden bg-green-50 flex flex-col justify-around mt-3 transition-[height] duration-500`}>
                 <a onClick={closeMenu} href="#home" class="">
-                    <div className="p-2 pl-5 border-t-2 border-green-500 bg-linear-to-br from-green-100 via-green-100 to-green-300 rounded-xl flex flex items-center gap-4">
+                    <div className="p-2 pl-5 border-t-2 border-green-500 bg-linear-to-br from-green-100 via-green-100 to-green-300 rounded-xl flex items-center gap-4">
                         <img src={home} alt="" className="h-4" />
                         Home
                     </div>

@@ -11,6 +11,9 @@ export default function Features() {
     return (
         <section id="features" class="bg-white py-16 scroll-mt-10">
             <div class="container mx-auto px-6">
+                <h1 class="text-center text-3xl md:text-4xl font-bold pb-6">
+                    Our Hallmarks
+                </h1>
                 <div class="flex flex-wrap justify-center">
                     <div class="w-full md:w-1/3 p-6 flex flex-col items-center">
                         <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mb-4">

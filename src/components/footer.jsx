@@ -4,11 +4,11 @@ import logoText from "../assets/Logo Text.svg"
 export default function Footer() {
     return (
 
-        <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <footer class="bg-green-100 text-white pt-16 pb-8">
             <div class="container mx-auto px-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-20 mb-12">
                     <div>
-                        <a href="#" class="text-2xl font-bold text-white flex items-center mb-6 flex max-w-[100vw] gap-[4%]">
+                        <a href="#" class="text-2xl font-bold text-white flex items-center mb-6 max-w-[100vw] gap-[4%]">
                             <img src={logo} alt="." className="w-[12%]" />
                             <img src={logoText} alt="" className="w-[80%]" />
                         </a>
@@ -28,14 +28,12 @@ export default function Footer() {
                                 class="text-gray-400 hover:text-white transition-colors">Join our WhatsApp Group</a></li>
                         </ul>
                     </div>
-
-
                 </div>
 
                 <div class="border-t border-gray-800 pt-8">
                     <div class="flex flex-col md:flex-row justify-between items-center">
                         <p class="text-gray-400 mb-4 md:mb-0">
-                            &copy; 2025 Shifa Homoeopathy. All rights reserved.
+                            &copy; 2025 Shifa Homoeopathy Speciality Clinic. All rights reserved.
                         </p>
                         {/* <div class="flex space-x-6">
                             <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
