@@ -13,7 +13,7 @@ export default function Faq() {
                                 properties while removing potential toxicity.`},
         {
             question: "Is homeopathy safe? ",
-            answer: `Homeopathy is generally considered very safe. The remedies are prepared at such high
+            answer: `Homeopathy is considered very safe. The remedies are prepared at such high
                                 dilutions that they contain minimal to no molecules of the original substance, making them
                                 non-toxic and suitable for people of all ages, including infants, pregnant women, and
                                 elderly individuals.` },

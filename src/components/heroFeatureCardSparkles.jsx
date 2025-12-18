@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Sparkles, Zap, Star } from 'lucide-react';
+import { Sparkles, Star } from 'lucide-react';
 import { features1 } from '../assets/data';
 import DiseaseModal from './diseaseModal';
 
@@ -32,7 +32,7 @@ const FeatureCard = ({ icon: Icon, title, description, gradient, delay, index, s
     >
       {/* Glowing background effect */}
       <div
-        className={`absolute inset-0 rounded-3xl blur-2xl transition-all duration-700 ${isHovered ? 'opacity-60 scale-110' : 'opacity-0 scale-95'
+        className={`absolute inset-0 rounded-3xl blur-sm transition-all duration-700 ${isHovered ? 'opacity-40 scale-110' : 'opacity-0 scale-95'
           }`}
         style={{
           background: gradient,
@@ -70,14 +70,14 @@ const FeatureCard = ({ icon: Icon, title, description, gradient, delay, index, s
         {isHovered && (
           <>
             <Sparkles
-              className="absolute top-4 right-4 text-yellow-400 animate-pulse"
+              className="absolute top-4 right-4 text-yellow-500 animate-[pulse_3s_ease-out_infinite]"
               size={20}
-              style={{ animation: 'twinkle 1.5s ease-in-out infinite' }}
+              // style={{ animation: 'twinkle 3s ease-in-out infinite' }}
             />
             <Star
-              className="absolute bottom-6 left-6 text-yellow-300"
+              className="absolute bottom-6 left-6 text-yellow-300 animate-[spin_4s_linear_infinite]"
               size={16}
-              style={{ animation: 'twinkle 2s ease-in-out infinite 0.5s' }}
+              // style={{ animation: 'twinkle 2s ease-in-out infinite 0.5s' }}
             />
           </>
         )}
@@ -101,7 +101,7 @@ const FeatureCard = ({ icon: Icon, title, description, gradient, delay, index, s
             style={{
               background: gradient,
               opacity: 0.15,
-              animation: isHovered ? 'pulse 2s ease-in-out infinite' : 'none',
+              // animation: isHovered ? 'pulse 5s ease-in-out infinite' : 'none',
             }}
           />
 
@@ -128,7 +128,7 @@ const FeatureCard = ({ icon: Icon, title, description, gradient, delay, index, s
               style={{
                 bottom: '-10px',
                 left: '-10px',
-                animation: 'zap 0.6s ease-out',
+                animation: 'pulse 0.6s ease-out infinite',
               }}
             />
           )} */}
@@ -164,18 +164,18 @@ const FeatureCard = ({ icon: Icon, title, description, gradient, delay, index, s
           <button
             className="relative inline-flex items-center px-4 py-2 mt-4 text-small font-bold text-white rounded-full overflow-hidden group"
             style={{
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              background: gradient
             }}
             onClick={() => setValue(index)}
           >
-            <span className="relative z-10 flex items-center">
+            <span className="relative z-10 flex items-center p-1">
               Know More
               <Sparkles size={15} className="ml-2" />
             </span>
             <div
-              className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-500"
+              className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 group-hover:opacity-30 transition-opacity duration-1000"
               style={{
-                animation: 'shimmer 2s infinite',
+                animation: 'shimmer 15s linear infinite',
                 backgroundSize: '200% 100%',
               }}
             />
@@ -183,7 +183,7 @@ const FeatureCard = ({ icon: Icon, title, description, gradient, delay, index, s
         </div>
 
         {/* Animated border gradient */}
-        <div
+        {/* <div
           className={`absolute inset-0 rounded-3xl transition-all duration-700 pointer-events-none ${isHovered ? 'opacity-100' : 'opacity-0'
             }`}
           style={{
@@ -193,17 +193,17 @@ const FeatureCard = ({ icon: Icon, title, description, gradient, delay, index, s
             WebkitMaskComposite: 'xor',
             maskComposite: 'exclude',
           }}
-        />
+        /> */}
 
         {/* Bottom shine effect */}
-        <div
+        {/* <div
           className={`absolute bottom-0 left-0 right-0 h-2 rounded-b-3xl transition-all duration-700 ${isHovered ? 'opacity-100' : 'opacity-0'
             }`}
           style={{
             background: gradient,
             boxShadow: `0 10px 40px ${gradient.split(',')[1].split(')')[0]})`,
           }}
-        />
+        /> */}
       </div>
     </div>
   );
@@ -306,16 +306,16 @@ const HeroFeatureCardsSparkles = () => {
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
-          className="absolute -top-40 -left-40 w-80 h-80 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"
-          style={{ animation: 'pulse 7s ease-in-out infinite' }}
+          className="absolute -top-40 -left-40 w-80 h-80 bg-purple-300 rounded-full opacity-30 md:motion-safe:animate-[pulse_5s_ease_infinite] md:blur-lg"
+          // style={{ animation: 'pulse 7s ease-in-out infinite' }}
         />
         <div
-          className="absolute -bottom-40 -right-40 w-80 h-80 bg-pink-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"
-          style={{ animation: 'pulse 9s ease-in-out infinite 2s' }}
+          className="absolute -bottom-40 -right-40 w-80 h-80 bg-pink-300 rounded-full opacity-30 md:motion-safe:animate-[pulse_5s_ease_infinite] md:blur-lg"
+          // style={{ animation: 'pulse 9s ease-in-out infinite 2s' }}
         />
         <div
-          className="absolute top-40 left-1/2 w-80 h-80 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"
-          style={{ animation: 'pulse 11s ease-in-out infinite 4s' }}
+          className="absolute top-40 left-1/2 w-80 h-80 bg-blue-300 rounded-full opacity-30 md:motion-safe:animate-[pulse_5s_ease_infinite] md:blur-lg"
+          // style={{ animation: 'pulse 11s ease-in-out infinite 4s' }}
         />
       </div>
 
@@ -369,7 +369,7 @@ const HeroFeatureCardsSparkles = () => {
         >
         </div>
         <DiseaseModal isOpen={val != -1} onClose={() => setVal(-1)}>
-          <h2 className="text-3xl font-bold mb-4">{heading}</h2>
+          <h2 className="text-3xl font-bold mb-4 pt-10">{heading}</h2>
           <p id='description' className="text-lg text-gray-700 mb-6">
             {description}
           </p>

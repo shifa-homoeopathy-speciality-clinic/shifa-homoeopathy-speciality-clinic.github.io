@@ -37,7 +37,7 @@ export const features1 = [
         delay: 0.2,
         heading: 'Access Bars',
         detailedDescription: `
-        <div class="flex flex-col items-center justify-center w-full text-xl">
+        <div class="flex flex-col items-center justify-center w-full text-xl pt-10">
             <div class="text-left w-full md:w-3/4">
             <strong>Access Bars</strong> is an alternative therapy where a practitioner lightly touches 32 points on the head, believed to correspond to different areas of life (like money, control, healing, creativity, communication, etc.). <br>
             The idea is that this helps release stored thoughts, emotions, and limiting beliefs. 
@@ -67,7 +67,7 @@ export const features1 = [
         delay: 0.4,
         heading: 'Access Facelift',
         detailedDescription: `
-        <div class="flex flex-col items-center justify-center w-full text-xl">
+        <div class="flex flex-col items-center justify-center w-full text-xl pt-10">
             <div class="text-left w-full md:w-3/4">
                 <strong>Access Facelift</strong> is a gentle hands-on technique where energy processes are "run" on the face and body to release stored judgments and aging beliefs.
                 

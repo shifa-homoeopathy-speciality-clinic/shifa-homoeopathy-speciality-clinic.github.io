@@ -1,2 +1,1 @@
-- change logo to English
-- convert emojis into vectors
+- modify when clicking on #links such that when the user presses back, it closes the page instead of staying on the same page.

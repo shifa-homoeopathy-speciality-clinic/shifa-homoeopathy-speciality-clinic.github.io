@@ -9,9 +9,10 @@ import contact from "../assets/nav_5contact.svg"
 import whatsapp from "../assets/nav_6whatsapp.svg"
 import { useEffect, useRef, useState } from "react"
 
+let menuIsChangingState = false;
+
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false)
-    const [menuIsClosing, setMenuIsClosing] = useState(false)
     const menuRef = useRef(null)
 
     function closeMenu() {
@@ -20,13 +21,16 @@ export default function Navbar() {
 
     useEffect(() => {
         function handleClickOutside(event) {
-            if (!menuIsClosing) {
-                setMenuOpen(false)
+            if (menuOpen) {
+                if (!menuIsChangingState) {
+                    console.log(menuOpen + " from click outside")
+                    setMenuOpen(false)
+                    menuIsChangingState = true;
+                    setTimeout(() => {
+                        menuIsChangingState = false;
+                    }, 550);
+                }
             }
-            setMenuIsClosing(true)
-            setTimeout(() => {
-                setMenuIsClosing(false)
-            }, 700);
         }
 
         document.addEventListener('mousedown', handleClickOutside)
@@ -39,14 +43,15 @@ export default function Navbar() {
     })
 
     function menuClick() {
-        // if (menuOpen) {
-        //     setMenuOpen(false)
-        // } else {
-        //     if (!menuIsClosing) {
-        //         setMenuOpen(true)
-        //     }
-        // }
-        setMenuOpen(!menuOpen)
+        console.log("menu click triggered")
+        if (!menuIsChangingState) {
+            console.log(menuOpen + " from menu click")
+            setMenuOpen(!menuOpen)
+            menuIsChangingState = true;
+            setTimeout(() => {
+                menuIsChangingState = false;
+            }, 550);
+        }
     }
 
     return (
