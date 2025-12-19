@@ -23,7 +23,6 @@ export default function Navbar() {
         function handleClickOutside(event) {
             if (menuOpen) {
                 if (!menuIsChangingState) {
-                    console.log(menuOpen + " from click outside")
                     setMenuOpen(false)
                     menuIsChangingState = true;
                     setTimeout(() => {
@@ -43,9 +42,7 @@ export default function Navbar() {
     })
 
     function menuClick() {
-        console.log("menu click triggered")
         if (!menuIsChangingState) {
-            console.log(menuOpen + " from menu click")
             setMenuOpen(!menuOpen)
             menuIsChangingState = true;
             setTimeout(() => {

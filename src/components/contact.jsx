@@ -73,6 +73,9 @@ export default function Contact() {
                             <div>
                                 <h4 class="font-bold mb-1">Phone and WhatsApp</h4>
                                 <p class="text-gray-600">(+91) 8075-899-030</p>
+                                <a href="tel:+918075899030" className="text-gray-600 underline">
+                                    Click to open in dialer
+                                </a> 
                             </div>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Sparkles, Star } from 'lucide-react';
 import { features1 } from '../assets/data';
 import DiseaseModal from './diseaseModal';
@@ -214,6 +214,8 @@ const HeroFeatureCardsSparkles = () => {
   const [heading, setHeading] = useState("");
   const [description, setDescription] = useState("");
   const [val, setVal] = useState(-1);
+  const popupOpenTime = useRef(Date.now())
+  const openPopupVal = useRef(-1)
 
 
   useEffect(() => {
@@ -221,11 +223,22 @@ const HeroFeatureCardsSparkles = () => {
   }, []);
 
   useEffect(() => {
-    if (val != -1) { // closing the popup
+    if (val != -1) { // opening the popup
       setHeading(features1[val].heading);
-      // setDescription(features1[val].detailedDescription);
       const targetDescriptionElement = document.getElementById('description');
       targetDescriptionElement.innerHTML = (features1[val].detailedDescription)
+
+      openPopupVal.current = val;
+      popupOpenTime.current = Date.now();
+      window.gtag("event", "eft_open", {
+        eft_name: features1[val].heading
+      })
+    } else if(openPopupVal.current != -1) {
+      window.gtag("event", "eft_close ", {
+        eft_name: features1[openPopupVal.current].heading,
+        eft_duration_ms: Date.now() - popupOpenTime.current
+      })
+      openPopupVal.current = -1;
     }
   }, [val]);
 
